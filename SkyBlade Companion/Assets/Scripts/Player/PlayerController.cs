@@ -31,6 +31,11 @@ public class PlayerController : MonoBehaviour
     public float waitAfterDashing;
     private float dashRechargeCounter;
 
+    //changing into ball
+
+    public GameObject standing, ball;
+    public float waitToBall;
+    private float ballCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -41,13 +46,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dashRechargeCounter > 0)
+        if (dashRechargeCounter > 0)
         {
-            dashRechargeCounter-=Time.deltaTime;
+            dashRechargeCounter -= Time.deltaTime;
         }
         else
         {
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("Fire2") && standing.activeSelf)
             {
                 dashCounter = dashTime;
                 ShowAfterImage();
@@ -60,9 +65,9 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(dashSpeed * transform.localScale.x, rb.velocity.y);
 
             afterImageCounter -= Time.deltaTime;
-            if(afterImageCounter <= 0)
+            if (afterImageCounter <= 0)
             {
-                ShowAfterImage() ;
+                ShowAfterImage();
             }
 
             dashRechargeCounter = waitAfterDashing;
@@ -102,13 +107,31 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
+
+        //shooting
         if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(transform.localScale.x, 0f);
             anim.SetTrigger("shotFired");
 
         }
-
+        //ball mode
+        if (!ball.activeSelf)
+        {
+            if (Input.GetAxisRaw("Vertical") < -.9f)
+            {
+                ballCounter -= Time.deltaTime;
+                if (ballCounter <= 0)
+                {
+                    ball.SetActive(true);
+                    standing.SetActive(false);
+                }
+            }
+            else
+            {
+                ballCounter = waitToBall;
+            }
+        }
 
 
 
@@ -120,12 +143,12 @@ public class PlayerController : MonoBehaviour
     //dashing effect for player
     public void ShowAfterImage()
     {
-       SpriteRenderer image= Instantiate(afterImage, transform.position, transform.rotation);
+        SpriteRenderer image = Instantiate(afterImage, transform.position, transform.rotation);
         image.sprite = sr.sprite;
         image.transform.localScale = transform.localScale;
         image.color = afterImageColor;
-        
-        Destroy(image.gameObject,afterImageLifetime);
+
+        Destroy(image.gameObject, afterImageLifetime);
         afterImageCounter = timeBetweenAfterImages;
     }
 }
