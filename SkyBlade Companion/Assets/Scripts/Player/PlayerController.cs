@@ -126,11 +126,11 @@ public class PlayerController : MonoBehaviour
                 Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(transform.localScale.x, 0f);
                 anim.SetTrigger("shotFired");
             }
-            else if(ball.activeSelf)
-                {
-                    Instantiate(bomb, bombPoint.position, bombPoint.rotation);
-                }
-            
+            else if (ball.activeSelf)
+            {
+                Instantiate(bomb, bombPoint.position, bombPoint.rotation);
+            }
+
 
         }
         //ball mode
