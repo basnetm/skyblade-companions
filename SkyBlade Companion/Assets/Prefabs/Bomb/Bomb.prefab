@@ -120,4 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToExplode: 0.5
-  explosion: {fileID: 0}
+  explosion: {fileID: 1383825302367251585, guid: ac01ae50e00eddc45acbd9c1de4ca039, type: 3}
