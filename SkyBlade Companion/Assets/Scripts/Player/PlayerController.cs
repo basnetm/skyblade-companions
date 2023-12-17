@@ -42,6 +42,10 @@ public class PlayerController : MonoBehaviour
     public Transform bombPoint;
     public GameObject bomb;
 
+    //tracking a player ability
+
+    private playerAbilityTracker abilities;
+
 
 
 
@@ -49,6 +53,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        abilities=GetComponent<playerAbilityTracker>();
     }
 
     // Update is called once per frame
@@ -60,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetButtonDown("Fire2") && standing.activeSelf)
+            if (Input.GetButtonDown("Fire2") && standing.activeSelf && abilities.canDash)
             {
                 dashCounter = dashTime;
                 ShowAfterImage();
@@ -100,7 +105,7 @@ public class PlayerController : MonoBehaviour
         isOnground = Physics2D.OverlapCircle(groundPoint.position, .2f, whatIsGround);
 
         //jumping
-        if (Input.GetButtonDown("Jump") && (isOnground || canDoubleJump))
+        if (Input.GetButtonDown("Jump") && (isOnground || (canDoubleJump && abilities.canDoubleJump)))
         {
             if (isOnground)
             {
@@ -126,7 +131,7 @@ public class PlayerController : MonoBehaviour
                 Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(transform.localScale.x, 0f);
                 anim.SetTrigger("shotFired");
             }
-            else if (ball.activeSelf)
+            else if (ball.activeSelf && abilities.canDropBomb)
             {
                 Instantiate(bomb, bombPoint.position, bombPoint.rotation);
             }
@@ -136,7 +141,7 @@ public class PlayerController : MonoBehaviour
         //ball mode
         if (!ball.activeSelf)
         {
-            if (Input.GetAxisRaw("Vertical") < -.9f)
+            if (Input.GetAxisRaw("Vertical") < -.9f && abilities.canBecomeBall)
             {
                 ballCounter -= Time.deltaTime;
                 if (ballCounter <= 0)
