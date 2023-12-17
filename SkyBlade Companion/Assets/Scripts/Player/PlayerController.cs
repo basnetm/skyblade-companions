@@ -36,6 +36,14 @@ public class PlayerController : MonoBehaviour
     public GameObject standing, ball;
     public float waitToBall;
     private float ballCounter;
+    public Animator ballAnim;
+
+    //dropping a bomb
+    public Transform bombPoint;
+    public GameObject bomb;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -111,8 +119,18 @@ public class PlayerController : MonoBehaviour
         //shooting
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(transform.localScale.x, 0f);
-            anim.SetTrigger("shotFired");
+
+            if (standing.activeSelf)
+            {
+
+                Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(transform.localScale.x, 0f);
+                anim.SetTrigger("shotFired");
+            }
+            else if(ball.activeSelf)
+                {
+                    Instantiate(bomb, bombPoint.position, bombPoint.rotation);
+                }
+            
 
         }
         //ball mode
@@ -135,9 +153,15 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-        anim.SetBool("isOnground", isOnground);
-        anim.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+        if (standing.activeSelf)
+        {
+            anim.SetBool("isOnground", isOnground);
+            anim.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+        }
+        if (ball.activeSelf)
+        {
+            ballAnim.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+        }
 
     }
     //dashing effect for player
