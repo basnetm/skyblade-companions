@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6372919083940867487}
   - component: {fileID: 1176675841791315451}
   - component: {fileID: 5659598863946962118}
+  - component: {fileID: -685934631638551388}
   m_Layer: 8
   m_Name: ability_pickup_effect
   m_TagString: Untagged
@@ -4887,6 +4888,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-685934631638551388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138663613105933077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c54f547e685682428850ef98cfc3d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 1
 --- !u!1 &7732608511352395384
 GameObject:
   m_ObjectHideFlags: 0

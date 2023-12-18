@@ -155,7 +155,25 @@ public class PlayerController : MonoBehaviour
                 ballCounter = waitToBall;
             }
         }
+        else
+        {
+            if (Input.GetAxisRaw("Vertical") > .9f)
+            {
+                ballCounter -= Time.deltaTime;
+                if (ballCounter <= 0)
+                {
+                    ball.SetActive(false);
+                    standing.SetActive(true);
 
+                   // AudioManager.instance.PlaySFX(10);
+                }
+
+            }
+            else
+            {
+                ballCounter = waitToBall;
+            }
+        }
 
 
         if (standing.activeSelf)
