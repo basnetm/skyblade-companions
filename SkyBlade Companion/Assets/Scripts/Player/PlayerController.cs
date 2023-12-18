@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetAxisRaw("Vertical") < -.9f && abilities.canBecomeBall)
             {
                 ballCounter -= Time.deltaTime;
-                if (ballCounter <= 0)
+                if (ballCounter >= 0)
                 {
                     ball.SetActive(true);
                     standing.SetActive(false);
