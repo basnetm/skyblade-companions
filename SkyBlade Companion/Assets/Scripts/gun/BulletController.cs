@@ -9,8 +9,7 @@ public class BulletController : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 moveDir;
     public GameObject impactEffect;
-   // public int attackDamage;
-
+    public int damageAmount = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -26,24 +25,20 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "enemy")
+        {
+            collision.GetComponent<enemyhealthController>().DamageEnemy(damageAmount);
+        }
         if (impactEffect != null)
         {
             Instantiate(impactEffect, transform.position, Quaternion.identity);
         }
-        //if (collision.CompareTag("Enemy"))
-        //{
-        //    collision.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-        //}
+      
         Destroy(gameObject);
 
     }
 
-    //private void AttackEnemy(int damage)
-    //{
-    //    attackDamage = damage;
-
-    //}
-
+   
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
