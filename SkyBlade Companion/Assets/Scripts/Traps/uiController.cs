@@ -9,7 +9,15 @@ public class uiController : MonoBehaviour
     public static uiController instance;
     private void Awake()
     {
-        instance = this;    
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);//this helps to load the same player until its life finished
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public Slider healthslider;
     // Start is called before the first frame update
