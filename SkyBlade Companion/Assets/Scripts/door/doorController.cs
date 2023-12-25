@@ -18,13 +18,13 @@ public class doorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thePlayer=playerhealthController.instance.GetComponent<PlayerController>();
+        thePlayer = playerhealthController.instance.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(Vector3.Distance(transform.position,thePlayer.transform.position)<distanceToOpen)
+        if (Vector3.Distance(transform.position, thePlayer.transform.position) < distanceToOpen)
         {
             anim.SetBool("door_open", true);
         }
@@ -42,11 +42,11 @@ public class doorController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Player")
+        if (collision.tag == "Player")
         {
             if (!playerExisting)
             {
-                thePlayer.canMove = false;  
+                thePlayer.canMove = false;
                 StartCoroutine(UseDoorCo());
             }
         }
@@ -56,11 +56,18 @@ public class doorController : MonoBehaviour
     {
         playerExisting = true;
         thePlayer.anim.enabled = false;
+        
+        uiController.instance.startFadeToBlack();
+
         yield return new WaitForSeconds(1.5f);
-        respawanController.instance.SetSpawn(exitPoint.position);   
-        thePlayer.canMove=true;
+        respawanController.instance.SetSpawn(exitPoint.position);
+        thePlayer.canMove = true;
         thePlayer.anim.enabled = true;
+
+        uiController.instance.startFadeFromBlack();
+
         SceneManager.LoadScene(levelToLoad);
-      } 
+    }
 
 }
+
