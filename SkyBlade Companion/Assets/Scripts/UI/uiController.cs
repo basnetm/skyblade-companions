@@ -7,6 +7,18 @@ public class uiController : MonoBehaviour
 {
 
     public static uiController instance;
+
+    public Slider healthslider;
+
+    public Image fadeScreen;
+
+    public float fadeSpeed = 2f;
+    public bool fadingToBlack, fadingFromBlack;
+
+    //coin
+    public int score = 0;
+    public Text scoreText;
+
     private void Awake()
     {
         if (instance == null)
@@ -19,12 +31,6 @@ public class uiController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public Slider healthslider;
-
-    public Image fadeScreen;
-
-    public float fadeSpeed = 2f;
-    public bool fadingToBlack, fadingFromBlack;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +81,18 @@ public class uiController : MonoBehaviour
         fadingFromBlack = true;
         fadingToBlack = false;
 
+    }
+
+    //coin
+    public void AddScore(int value)
+    {
+        score += value;
+        UpdateScoreText();
+    }
+
+    public void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + score;
     }
 }
 

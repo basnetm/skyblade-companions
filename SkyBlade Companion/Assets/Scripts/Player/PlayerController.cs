@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        abilities=GetComponent<playerAbilityTracker>();
+        abilities = GetComponent<playerAbilityTracker>();
         canMove = true;
     }
 
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rb.velocity=Vector2.zero;
+            rb.velocity = Vector2.zero;
         }
 
         if (standing.activeSelf)
@@ -213,12 +213,4 @@ public class PlayerController : MonoBehaviour
         Destroy(image.gameObject, afterImageLifetime);
         afterImageCounter = timeBetweenAfterImages;
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "PickupCoin")
-    //    {
-    //        coinCount=coins.instance.coinValue++;
-    //    }
-    //}
 }
