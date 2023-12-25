@@ -34,6 +34,7 @@ public class doorController : MonoBehaviour
 
 
         }
+
         if (playerExisting)
         {
             thePlayer.transform.position = Vector3.MoveTowards(thePlayer.transform.position, exitPoint.position, movePlayerSpeed * Time.deltaTime);
@@ -61,6 +62,7 @@ public class doorController : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
         respawanController.instance.SetSpawn(exitPoint.position);
+
         thePlayer.canMove = true;
         thePlayer.anim.enabled = true;
 
@@ -68,6 +70,10 @@ public class doorController : MonoBehaviour
 
         SceneManager.LoadScene(levelToLoad);
     }
+
+
+
+
 
 }
 

@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
     //for passing through door 
     public bool canMove;
 
+    public int coinCount;
+
 
 
 
@@ -211,4 +213,12 @@ public class PlayerController : MonoBehaviour
         Destroy(image.gameObject, afterImageLifetime);
         afterImageCounter = timeBetweenAfterImages;
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "PickupCoin")
+    //    {
+    //        coinCount=coins.instance.coinValue++;
+    //    }
+    //}
 }

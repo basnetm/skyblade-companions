@@ -22,8 +22,9 @@ public class uiController : MonoBehaviour
     public Slider healthslider;
 
     public Image fadeScreen;
+
     public float fadeSpeed = 2f;
-    private bool fadingToBlack, fadingFromBlack;
+    public bool fadingToBlack, fadingFromBlack;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class uiController : MonoBehaviour
         if (fadingToBlack)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
+
             if (fadeScreen.color.a == 1f)
             {
                 fadingToBlack = false;
@@ -45,11 +47,17 @@ public class uiController : MonoBehaviour
         else if (fadingFromBlack)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
+
             if (fadeScreen.color.a == 0f)
             {
                 fadingFromBlack = false;
             }
         }
+
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    PauseUnpause();
+        //}
     }
 
     public void UpdateHealth(int currentHealth, int maxHealth)
@@ -65,7 +73,7 @@ public class uiController : MonoBehaviour
     public void startFadeFromBlack()
     {
         fadingFromBlack = true;
-        fadingFromBlack = false;
+        fadingToBlack = false;
 
     }
 }
