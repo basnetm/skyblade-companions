@@ -10,7 +10,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - No Collisions
   - Water
   - UI
   - Ground
@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3879310153
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -57,4 +60,7 @@ TagManager:
     locked: 0
   - name: shot
     uniqueID: 3029205151
+    locked: 0
+  - name: Ground
+    uniqueID: 1151184751
     locked: 0

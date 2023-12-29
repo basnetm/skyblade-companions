@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &479621723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1701,6 +1701,7 @@ MonoBehaviour:
   bombPoint: {fileID: 889373703}
   bomb: {fileID: 7774651045931392004, guid: 8adbf36c1ba5bb447be2aaee08ece219, type: 3}
   canMove: 0
+  coinCount: 0
 --- !u!114 &917729184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,6 +2615,8 @@ MonoBehaviour:
   fadeSpeed: 2
   fadingToBlack: 0
   fadingFromBlack: 0
+  score: 0
+  scoreText: {fileID: 0}
 --- !u!114 &1824943488
 MonoBehaviour:
   m_ObjectHideFlags: 0
