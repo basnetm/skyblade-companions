@@ -10,7 +10,7 @@ public class mainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       audioManager.instance.PlayMainMusic();
     }
     public void NewGame()
     {
