@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
                 {
                     dashCounter = dashTime;
                     ShowAfterImage();
+                    audioManager.instance.PlaySFXAdjusted(8);
                 }
             }
 
@@ -121,12 +122,14 @@ public class PlayerController : MonoBehaviour
                 if (isOnground)
                 {
                     canDoubleJump = true;
+                    audioManager.instance.PlaySFXAdjusted(13);
                 }
                 else
                 {
                     canDoubleJump = false;
 
                     anim.SetTrigger("DoubleJump");
+                    audioManager.instance.PlaySFXAdjusted(10);
                 }
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -141,10 +144,13 @@ public class PlayerController : MonoBehaviour
 
                     Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(transform.localScale.x, 0f);
                     anim.SetTrigger("shotFired");
+
+                    audioManager.instance.PlaySFXAdjusted(0);
                 }
                 else if (ball.activeSelf && abilities.canDropBomb)
                 {
                     Instantiate(bomb, bombPoint.position, bombPoint.rotation);
+                    //audioManager.instance.PlaySFXAdjusted(0);
                 }
 
 
@@ -159,6 +165,7 @@ public class PlayerController : MonoBehaviour
                     {
                         ball.SetActive(true);
                         standing.SetActive(false);
+                        audioManager.instance.PlayAFX(7);
                     }
                 }
                 else
@@ -176,7 +183,7 @@ public class PlayerController : MonoBehaviour
                         ball.SetActive(false);
                         standing.SetActive(true);
 
-                        // AudioManager.instance.PlaySFX(10);
+                         audioManager.instance.PlayAFX(11);
                     }
 
                 }

@@ -77,11 +77,13 @@ public class playerhealthController : MonoBehaviour
                 //gameObject.SetActive(false);
 
                 respawanController.instance.Respawn();
+                audioManager.instance.PlayAFX(9);
 
             }
             else
             {
                 invincCounter = invincibilityLength;
+                audioManager.instance.PlaySFXAdjusted(12);
             }
             uiController.instance.UpdateHealth(currentHealth, maxHealth);
         }

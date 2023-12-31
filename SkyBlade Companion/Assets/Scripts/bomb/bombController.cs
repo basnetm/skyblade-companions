@@ -36,6 +36,11 @@ public class bombController : MonoBehaviour
                     Destroy(col.gameObject);
                 }
             }
+
+
+            
+            
         }
     }
+
 }

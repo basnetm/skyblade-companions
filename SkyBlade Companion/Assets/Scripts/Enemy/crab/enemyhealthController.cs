@@ -17,6 +17,7 @@ public class enemyhealthController : MonoBehaviour
 
             }
             Destroy(gameObject);
+            audioManager.instance.PlaySFXAdjusted(5);
         }
     }
 }
