@@ -54,13 +54,19 @@ public class audioManager : MonoBehaviour
         sfx[sfxToPlay].Play();
     }
 
+    //public void PlaySFXAdjusted(int sfxToAdjust)
+    //{
+    //    System.Random random = new System.Random();
+    //    sfx[sfxToAdjust].pitch = (float)random.NextDouble() * 0.4f + 0.8f;
+    //    PlayAFX(sfxToAdjust);
+    //}
+
     public void PlaySFXAdjusted(int sfxToAdjust)
     {
-        System.Random random = new System.Random();
-        sfx[sfxToAdjust].pitch = (float)random.NextDouble() * 0.4f + 0.8f;
-        PlayAFX(sfxToAdjust);
+        
+        sfx[sfxToAdjust].pitch = UnityEngine.Random.Range(.8f, 102f);
+        PlayAFX(sfxToAdjust); ;
     }
-
 
 
 

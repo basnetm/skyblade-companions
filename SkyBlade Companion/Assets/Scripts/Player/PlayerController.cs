@@ -122,14 +122,14 @@ public class PlayerController : MonoBehaviour
                 if (isOnground)
                 {
                     canDoubleJump = true;
-                    audioManager.instance.PlaySFXAdjusted(13);
+                    audioManager.instance.PlaySFXAdjusted(10);
                 }
                 else
                 {
                     canDoubleJump = false;
 
                     anim.SetTrigger("DoubleJump");
-                    audioManager.instance.PlaySFXAdjusted(10);
+                    audioManager.instance.PlaySFXAdjusted(8);
                 }
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
                 else if (ball.activeSelf && abilities.canDropBomb)
                 {
                     Instantiate(bomb, bombPoint.position, bombPoint.rotation);
-                    //audioManager.instance.PlaySFXAdjusted(0);
+                    audioManager.instance.PlaySFXAdjusted(0);
                 }
 
 
