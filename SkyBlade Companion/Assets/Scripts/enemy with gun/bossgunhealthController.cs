@@ -12,7 +12,7 @@ public class bossgunhealthController : MonoBehaviour
     }
     public Slider bossHealthSlider;
     public int currentHealth = 30;
-    public bossGunActivator theboss;
+    public bossgunBatle theboss;
     // Start is called before the first frame update
     void Start()
     {

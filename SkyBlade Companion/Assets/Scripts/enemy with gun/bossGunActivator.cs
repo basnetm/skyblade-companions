@@ -7,10 +7,7 @@ public class bossGunActivator : MonoBehaviour
 {
     public GameObject bossToActivate;
 
-    internal void EndBattle()
-    {
-        throw new NotImplementedException();
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

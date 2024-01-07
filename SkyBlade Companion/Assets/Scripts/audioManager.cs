@@ -65,7 +65,7 @@ public class audioManager : MonoBehaviour
     {
         
         sfx[sfxToAdjust].pitch = UnityEngine.Random.Range(.8f, 102f);
-        PlayAFX(sfxToAdjust); ;
+        PlayAFX(sfxToAdjust); 
     }
 
 
