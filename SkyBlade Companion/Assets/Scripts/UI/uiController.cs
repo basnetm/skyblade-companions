@@ -21,15 +21,16 @@ public class uiController : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);//this helps to load the same player until its life finished
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(gameObject);//this helps to load the same player until its life finished
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
+        instance=this;
     }
 
     // Start is called before the first frame update
