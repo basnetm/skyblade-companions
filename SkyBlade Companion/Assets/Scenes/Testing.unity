@@ -3926,10 +3926,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5070491624757738864, guid: b8a87e2ee403d10459d18e3bb315c6af, type: 3}
-      propertyPath: winobject
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6366418173835425210, guid: b8a87e2ee403d10459d18e3bb315c6af, type: 3}
       propertyPath: m_Name
       value: boss battle with gun
