@@ -107,37 +107,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &853318511558144180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3135675334531453903}
-  m_Layer: 0
-  m_Name: Cam point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3135675334531453903
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853318511558144180}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.12, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1776017268429818352}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1011924585331167794
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +250,68 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3188107617249041428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7501516041230954233}
+  m_Layer: 0
+  m_Name: cam point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7501516041230954233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3188107617249041428}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.492435, y: -2.2737381, z: -10}
+  m_LocalScale: {x: 1, y: 1.9560937, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1776017268429818352}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4129663233882122735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8179964316173630163}
+  m_Layer: 0
+  m_Name: Return Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8179964316173630163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129663233882122735}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.79, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1776017268429818352}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4372383257834598350
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +588,6 @@ GameObject:
   - component: {fileID: 1776017268429818352}
   - component: {fileID: 5070491624757738864}
   - component: {fileID: 1985152585866930753}
-  - component: {fileID: 8535011164202392696}
   m_Layer: 0
   m_Name: boss battle with gun
   m_TagString: Boss
@@ -577,12 +607,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7501516041230954233}
   - {fileID: 7852604797498494662}
-  - {fileID: 3135675334531453903}
   - {fileID: 5071186990308490901}
   - {fileID: 1192005861877233865}
+  - {fileID: 8179964316173630163}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5070491624757738864
 MonoBehaviour:
@@ -596,7 +627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b838f342dfbc5464ab0f4bdf078c5efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSpeed: 2
+  camPosition: {fileID: 7501516041230954233}
+  timeCounter: 6
+  camSpeed: 5
+  returnPoint: {fileID: 8179964316173630163}
   threshold1: 25
   threshold2: 5
   activeTime: 5
@@ -615,6 +649,7 @@ MonoBehaviour:
   timeBetweenShots2: 0.5
   bullet: {fileID: 9032713693585730148, guid: ff03e8cbf5a0a5c46b73cc8eccf13398, type: 3}
   shotPoint: {fileID: 5151332612192424946}
+  winobject: {fileID: 0}
 --- !u!114 &1985152585866930753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,23 +663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossHealthSlider: {fileID: 7389482509222529306}
-  currentHealth: 30
+  currentHealth: 5
   theboss: {fileID: 5070491624757738864}
---- !u!114 &8535011164202392696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6366418173835425210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa39b765b48fa4a4fb5dea5b94132f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camPosition: {fileID: 3135675334531453903}
-  camSpeed: 5
-  timeCounter: 8.5
 --- !u!1 &7005580262003705790
 GameObject:
   m_ObjectHideFlags: 0

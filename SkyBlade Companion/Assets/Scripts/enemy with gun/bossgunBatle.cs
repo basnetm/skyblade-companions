@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class bossgunBatle : MonoBehaviour
 {
+    [Header("Moving Camera")]
     private cameraController theCam;
     public Transform camPosition;
-
-
+    public float timeCounter;
     public float camSpeed;
+    public Transform returnPoint;
+
     public int threshold1, threshold2;
     public float activeTime, fadeoutTime, inactiveTime;
     private float activeCounter, fadeCounter, inactiveCounter;
     public Transform[] spawnPoints;
     private Transform targetPoint;
+
     public float moveSpeed;
     public Animator anim;
     public Transform theBoss;
@@ -43,7 +46,17 @@ public class bossgunBatle : MonoBehaviour
     {
         if (!battleEnded)
         {
-            theCam.transform.position=Vector3.MoveTowards(theCam.transform.position,camPosition.position,camSpeed*Time.deltaTime);
+            //modified code
+            theCam.transform.position = Vector3.MoveTowards(theCam.transform.position, camPosition.position, camSpeed * Time.deltaTime);
+            timeCounter -= Time.deltaTime;
+            if(timeCounter <= 0)
+            {
+                timeCounter = 0;
+                //theCam.transform.position = Vector3.MoveTowards(theCam.transform.position, returnPoint.position, 6f * Time.deltaTime);
+                theCam.transform.position = returnPoint.position;
+                theCam.enabled = true;
+            }
+            
             if (bossgunhealthController.Instance.currentHealth > threshold1)
             {
                 if (activeCounter > 0)
