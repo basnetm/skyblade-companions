@@ -81,9 +81,11 @@ public class PetController : MonoBehaviour
 
     private IEnumerator StopAtTarget()
     {
-        
+       // followEnabled = false;  
+
         yield return new WaitForSeconds(stopDuration);
         isAtTarget = false; //continue following the target after the stop duration
+        //followEnabled = true;
         
     }
 
@@ -112,6 +114,7 @@ public class PetController : MonoBehaviour
         if (currentWaypoint >= path.vectorPath.Count)
         {
             isAtTarget = true;
+            //followEnabled = false;
             return;
         }
 

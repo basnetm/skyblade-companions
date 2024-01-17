@@ -50,11 +50,11 @@ public class PetMeleeAttack : MonoBehaviour
                     meleeAttackCoroutine = StartCoroutine(MeleeAttackCO());
 
                     //give damage to enemy
-                    EnemyHealth enemyHealth = enemyCollider.GetComponent<EnemyHealth>();
+                    enemyhealthController enemyHealth = enemyCollider.GetComponent<enemyhealthController>();
 
                     if (enemyHealth != null)
                     {
-                        enemyHealth.TakeDamage(damageAmount);
+                        enemyHealth.DamageEnemy(damageAmount);
                     }
                 }
             }

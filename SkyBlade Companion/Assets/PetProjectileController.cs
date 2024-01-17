@@ -38,10 +38,10 @@ public class PetProjectileController : MonoBehaviour
     {
         if (other.CompareTag("enemy"))
         {
-            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            enemyhealthController enemyHealth = other.GetComponent<enemyhealthController>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(damage);
+                enemyHealth.DamageEnemy(damage);
             }
 
             Destroy(gameObject);

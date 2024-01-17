@@ -6,7 +6,7 @@ using UnityEngine;
 public class bossGunActivator : MonoBehaviour
 {
     public GameObject bossToActivate;
-
+    public GameObject pet;
     
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -15,7 +15,7 @@ public class bossGunActivator : MonoBehaviour
         {
             bossToActivate.SetActive(true);
             gameObject.SetActive(false);    
-
+            pet.SetActive(false);
         }
     }
 }

@@ -436,8 +436,9 @@ Transform:
   - {fileID: 1492582166985692284}
   - {fileID: 1508076531154443760}
   - {fileID: 6401055098356393772}
+  - {fileID: 2368407514955831064}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2621020842754682161
 Rigidbody2D:
@@ -502,6 +503,7 @@ MonoBehaviour:
   bombPoint: {fileID: 6401055098356393772}
   bomb: {fileID: 7774651045931392004, guid: 8adbf36c1ba5bb447be2aaee08ece219, type: 3}
   canMove: 0
+  coinCount: 0
 --- !u!114 &2081858321661080437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,3 +539,34 @@ MonoBehaviour:
   playerSprites:
   - {fileID: 8686641593830599820}
   - {fileID: 4437861573370707341}
+--- !u!1 &8791565712460755067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2368407514955831064}
+  m_Layer: 0
+  m_Name: target_point
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2368407514955831064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791565712460755067}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.95, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3566089795336469140}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
