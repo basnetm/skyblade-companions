@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dee4a9a9f0da4645997881adbab10de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
 --- !u!58 &301883063
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -250,7 +249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301883061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.04, y: -0.52, z: 0}
+  m_LocalPosition: {x: 2.3, y: -1.9, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -456,7 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dee4a9a9f0da4645997881adbab10de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
 --- !u!58 &810746273
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -908,7 +906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dee4a9a9f0da4645997881adbab10de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
 --- !u!58 &1722397043
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2447,6 +2444,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1926786841}
+    - target: {fileID: 4958571669908210864, guid: 4cd889e25c176ba4b9040374a0d76d0c, type: 3}
+      propertyPath: isRangeAttacking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225310448607628997, guid: 4cd889e25c176ba4b9040374a0d76d0c, type: 3}
+      propertyPath: isMeleeAttacking
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
