@@ -3134,12 +3134,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3532313194960445949, guid: 4cd889e25c176ba4b9040374a0d76d0c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4820907525537595054, guid: 4cd889e25c176ba4b9040374a0d76d0c, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1660400103}
     - target: {fileID: 4820907525537595054, guid: 4cd889e25c176ba4b9040374a0d76d0c, type: 3}
       propertyPath: activateDistance
       value: 50
