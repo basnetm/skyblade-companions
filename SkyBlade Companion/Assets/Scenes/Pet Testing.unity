@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &301883062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,9 +151,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 301883061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dee4a9a9f0da4645997881adbab10de, type: 3}
+  m_Script: {fileID: 11500000, guid: 504a3b10907c483468f40020125438ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!58 &301883063
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -442,7 +443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &810746272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,9 +453,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 810746271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dee4a9a9f0da4645997881adbab10de, type: 3}
+  m_Script: {fileID: 11500000, guid: 504a3b10907c483468f40020125438ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!58 &810746273
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -753,7 +755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1722397042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,9 +765,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1722397041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dee4a9a9f0da4645997881adbab10de, type: 3}
+  m_Script: {fileID: 11500000, guid: 504a3b10907c483468f40020125438ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!58 &1722397043
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1062,7 +1065,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1151184751
-  m_SortingLayer: 6
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3146,11 +3149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4958571669908210864, guid: 4cd889e25c176ba4b9040374a0d76d0c, type: 3}
       propertyPath: isRangeAttacking
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7225310448607628997, guid: 4cd889e25c176ba4b9040374a0d76d0c, type: 3}
       propertyPath: isMeleeAttacking
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

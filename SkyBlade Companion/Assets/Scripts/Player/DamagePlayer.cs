@@ -7,6 +7,7 @@ public class DamagePlayer : MonoBehaviour
     public int damageAmount = 1;
     public bool destroyOnDamage;
     public GameObject destroyEffect;
+    
 
 
     private void OnCollisionEnter2D(Collision2D collision)

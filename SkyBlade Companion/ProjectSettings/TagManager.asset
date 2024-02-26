@@ -24,7 +24,7 @@ TagManager:
   - BossShot
   - Obstacle
   - Enemies
-  - 
+  - Platform
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 1151184751
+    locked: 0
   - name: World
     uniqueID: 2003674683
     locked: 0
@@ -61,7 +64,4 @@ TagManager:
     locked: 0
   - name: shot
     uniqueID: 3029205151
-    locked: 0
-  - name: Ground
-    uniqueID: 1151184751
     locked: 0

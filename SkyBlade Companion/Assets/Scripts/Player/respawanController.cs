@@ -11,7 +11,7 @@ public class respawanController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);//this helps to load the same player until its life finished
+           // DontDestroyOnLoad(gameObject);//this helps to load the same player until its life finished
         }
         else
         {
@@ -21,14 +21,14 @@ public class respawanController : MonoBehaviour
 
     private Vector3 respawnPoint;
     public float waitToRespawn;
-    private GameObject thePlayer;
+    [SerializeField] private GameObject thePlayer;
 
     public GameObject deathEffect;
 
     // Start is called before the first frame update
     void Start()
     {
-        thePlayer = playerhealthController.instance.gameObject;
+        //thePlayer = playerhealthController.instance.gameObject;
         respawnPoint=thePlayer.transform.position;
     
     
@@ -55,7 +55,7 @@ public class respawanController : MonoBehaviour
     {
         thePlayer.SetActive(false);
 
-        if(deathEffect != null)
+        if (deathEffect != null)
         {
             Instantiate(deathEffect, thePlayer.transform.position, thePlayer.transform.rotation);
         }

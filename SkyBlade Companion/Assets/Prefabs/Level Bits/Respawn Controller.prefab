@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6196528014782232760
 MonoBehaviour:
@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitToRespawn: 2
+  thePlayer: {fileID: 5856998098567281914, guid: 39d5dad3ba532c643802b1330ffd0202, type: 3}
   deathEffect: {fileID: 7071121193347475263, guid: 74cb10db3a3d98c41a7391987efabb18, type: 3}

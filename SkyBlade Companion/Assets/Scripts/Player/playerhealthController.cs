@@ -8,16 +8,23 @@ public class playerhealthController : MonoBehaviour
 
     private void Awake()
     {
-        //if (instance == null) { 
-        //instance = this;
-        //DontDestroyOnLoad(gameObject);//this helps to load the same player until its life finished
+        if (instance == null)
+        {
+            instance = this;
+           // DontDestroyOnLoad(gameObject);//this helps to load the same player until its life finished
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        //if (instance == null)
+        //{
+        //    instance = this;
+
         //}
         //else
-        //{
-        //    Destroy(gameObject);
-        //}
-
-        instance = this;   
+        // Destroy(gameObject);
     }
 
     //[HideInInspector]//helps to hide from inspector 
