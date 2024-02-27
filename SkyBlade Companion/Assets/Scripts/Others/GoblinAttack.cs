@@ -11,7 +11,7 @@ public class GoblinAttack : MonoBehaviour
     public LayerMask enemyLayer;
 
     private bool isAttacking = false;
-    private PetController petController;
+    //private PetController petController;
     private Animator anim;
 
     private Coroutine meleeAttackCoroutine;
@@ -19,7 +19,7 @@ public class GoblinAttack : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        petController = GetComponent<PetController>();
+      //  petController = GetComponent<PetController>();
     }
 
     private void Update()
@@ -30,10 +30,10 @@ public class GoblinAttack : MonoBehaviour
 
             if (hitEnemies.Length > 0)
             {
-                foreach (Collider2D enemyCollider in hitEnemies)
+                foreach (Collider2D playercollider in hitEnemies)
                 {
                     //check if the enemy is already dead
-                    if (enemyCollider == null || !enemyCollider.gameObject.activeSelf)
+                    if (playercollider == null || !playercollider.gameObject.activeSelf)
                     {
                         continue;
                     }
@@ -42,11 +42,11 @@ public class GoblinAttack : MonoBehaviour
                     meleeAttackCoroutine = StartCoroutine(MeleeAttackCO());
 
                     //give damage to enemy
-                    enemyhealthController enemyHealth = enemyCollider.GetComponent<enemyhealthController>();
+                    playerhealthController enemyHealth = playercollider.GetComponent<playerhealthController>();
 
                     if (enemyHealth != null)
                     {
-                        enemyHealth.DamageEnemy(damageAmount);
+                        enemyHealth.DamagePlayer(damageAmount);
                     }
                 }
             }

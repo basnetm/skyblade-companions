@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7797796097909939113}
   - component: {fileID: 162082697775584324}
   - component: {fileID: 1704138696763872579}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2764737352582413546}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: patrol point_3
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 8636147514590106956}
   - component: {fileID: 3560315081385412850}
   - component: {fileID: 3460627226467618158}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: enemy_walker
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ Transform:
   - {fileID: 7797796097909939113}
   - {fileID: 1998134751859330719}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &6778011082131035307
 CircleCollider2D:
@@ -297,7 +297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1155221756207558881}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: patrol point_1
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998134751859330719}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: patrol points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86971662372045542}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: patrol point_2
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}

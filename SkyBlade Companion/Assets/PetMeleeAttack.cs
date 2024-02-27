@@ -60,6 +60,7 @@ public class PetMeleeAttack : MonoBehaviour
             }
             else
             {
+                Debug.Log(hitEnemies);
                 StopMeleeAttack();
             }
         }
