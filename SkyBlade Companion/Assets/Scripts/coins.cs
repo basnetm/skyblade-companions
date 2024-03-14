@@ -24,6 +24,7 @@ public class coins : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             uiController.instance.AddScore(coinValue);
+            audioManager.instance.PlaySFXAdjusted(10);
             Destroy(gameObject);
         }
     }
