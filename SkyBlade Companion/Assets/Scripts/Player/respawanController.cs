@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class respawanController : MonoBehaviour
 {
     public static respawanController instance;
+   
+
     private void Awake()
     {
         if (instance == null)
@@ -60,7 +63,13 @@ public class respawanController : MonoBehaviour
             Instantiate(deathEffect, thePlayer.transform.position, thePlayer.transform.rotation);
         }
 
+        uiController.instance.startFadeToBlack();
         yield return new WaitForSeconds(waitToRespawn);
+        uiController.instance.startFadeFromBlack();
+
+
+
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         thePlayer.transform.position = respawnPoint;
         thePlayer.SetActive(true);

@@ -10,7 +10,7 @@ public class gamescenemanager : MonoBehaviour
     public string back;
    
 
-    public void loadlevel( )
+    public void loadlevel()
     {
         SceneManager.LoadScene(level1);
     }

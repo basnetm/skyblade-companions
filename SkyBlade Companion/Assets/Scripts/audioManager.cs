@@ -14,7 +14,7 @@ public class audioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            
         }
         else
         {
@@ -29,6 +29,7 @@ public class audioManager : MonoBehaviour
         levelMusic.Stop();
         bossMusic.Stop();
         mainMenu.Play();
+       
     }
 
     public void PlayLevelMusic()
@@ -38,6 +39,7 @@ public class audioManager : MonoBehaviour
             bossMusic.Stop();
             mainMenu.Stop();
             levelMusic.Play();
+           
 
         }
     }

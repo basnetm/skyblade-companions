@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class pausemenumanager : MonoBehaviour
 {
-    public string quit;
-    public string resume;
+   
     public GameObject conformmessage;
     public GameObject pausemenu;
     public bool isgamepaused=false;

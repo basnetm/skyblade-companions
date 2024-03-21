@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour
 {
     
    public string playscene;
+
+    private void Start()
+    {
+        audioManager.instance.PlayMainMusic();  
+    }
     public void Play()
 
     {

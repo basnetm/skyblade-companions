@@ -7,6 +7,7 @@ TagManager:
   - enemy
   - pickupCoin
   - Boss
+  - Turret
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Obstacle
   - Enemies
   - Platform
-  - 
+  - enemyprojectile
   - 
   - 
   - 
