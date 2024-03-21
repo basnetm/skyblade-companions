@@ -26,7 +26,7 @@ TagManager:
   - Obstacle
   - Enemies
   - Platform
-  - enemyprojectile
+  - Rain
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: BG
     uniqueID: 3879310153
+    locked: 0
+  - name: Rain
+    uniqueID: 1770975593
     locked: 0
   - name: Default
     uniqueID: 0
@@ -65,4 +68,7 @@ TagManager:
     locked: 0
   - name: shot
     uniqueID: 3029205151
+    locked: 0
+  - name: VFX
+    uniqueID: 3868113101
     locked: 0
